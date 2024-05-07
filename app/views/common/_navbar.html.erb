@@ -1,0 +1,90 @@
+<!-- 导航栏 -->
+<nav id="navbar" class="navbar">
+  <div class="container">
+    <a href="#" id="logo">YourLogo</a>
+    <button class="nav-toggler" onclick="toggleNav()">&#9776;</button>
+    <ul id="nav-list" class="nav-list">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- 样式 -->
+<style>
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 0.5rem 1rem;
+  }
+  .container {
+    max-width: 1140px;
+    margin: auto;
+  }
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  .nav-item {
+    margin-left: 1rem;
+  }
+  .nav-link {
+    text-decoration: none;
+    color: #333;
+  }
+  .nav-link.active {
+    font-weight: bold;
+  }
+  .nav-toggler {
+    display: none;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    .nav-list {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .nav-list.active {
+      display: flex;
+    }
+    .nav-toggler {
+      display: block;
+    }
+  }
+</style>
+
+<!-- 脚本 -->
+<script>
+  function toggleNav() {
+    var navList = document.getElementById('nav-list');
+    if (navList.classList.contains('active')) {
+      navList.classList.remove('active');
+    } else {
+      navList.classList.add('active');
+    }
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    var navList = document.getElementById('nav-list');
+    if (navList) {
+      navList.classList.remove('active');
+    }
+  });
+</script>
