@@ -1,11 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+* 先安装rails7，创建项目，然后 dockerfile改为国内源。
 
 * System dependencies
 
